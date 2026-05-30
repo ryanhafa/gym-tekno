@@ -21,7 +21,7 @@
 
         <div class="bg-white rounded-2xl shadow-lg p-8">
             <h2 class="text-2xl font-bold text-center mb-2">Masuk</h2>
-            <p class="text-gray-500 text-center mb-8 text-sm">Masuk sebagai Admin atau Member</p>
+            <p class="text-gray-500 text-center mb-8 text-sm">Masuk ke akun GymTekno Anda</p>
 
             @if ($errors->any())
                 <div class="mb-6 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg text-sm">
@@ -31,24 +31,6 @@
 
             <form method="POST" action="{{ route('login.authenticate') }}" class="space-y-5">
                 @csrf
-
-                <div>
-                    <label class="block text-sm font-medium text-gray-700 mb-2">Masuk Sebagai</label>
-                    <div class="flex gap-2">
-                        <label class="flex-1">
-                            <input type="radio" name="role" value="admin" class="peer sr-only" checked>
-                            <div class="text-center px-4 py-3 rounded-lg border-2 border-gray-200 peer-checked:border-red-500 peer-checked:bg-red-50 peer-checked:text-red-700 cursor-pointer transition font-medium text-sm">
-                                Admin
-                            </div>
-                        </label>
-                        <label class="flex-1">
-                            <input type="radio" name="role" value="member" class="peer sr-only">
-                            <div class="text-center px-4 py-3 rounded-lg border-2 border-gray-200 peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700 cursor-pointer transition font-medium text-sm">
-                                Member
-                            </div>
-                        </label>
-                    </div>
-                </div>
 
                 <div>
                     <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
